@@ -12,7 +12,9 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(express.static("public"));
 
-
+app.get('/', (req, res) => {
+  res.send("Hello Ankush")
+})
 
 app.listen(3000, function() {
   console.log("Server started on port 3000");
