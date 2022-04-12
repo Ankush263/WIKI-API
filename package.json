@@ -4,5 +4,23 @@
     "ejs": "^3.1.6",
     "express": "^4.17.3",
     "mongoose": "^6.2.10"
-  }
+  },
+  "name": "wiki-api",
+  "version": "1.0.0",
+  "main": "app.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ankush263/WIKI-API.git"
+  },
+  "author": "Ankush",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Ankush263/WIKI-API/issues"
+  },
+  "homepage": "https://github.com/Ankush263/WIKI-API#readme",
+  "description": ""
 }
