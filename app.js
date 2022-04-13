@@ -22,6 +22,8 @@ const articleSchema = {
 
 const Article = mongoose.model("Article", articleSchema)
 
+app.route('/articles').get().post().delete()
+
 app.get('/articles', (req, res) => {
   Article.find({}, (err, foundArticles) => {                           //may be change {} --> null;
     if(!err) {
