@@ -39,7 +39,13 @@ app.post('/articles', (req, res) => {
     content: req.body.content
   })
 
-  newArticle.save()
+  newArticle.save((err) => {
+    if(!err) {
+      res.send("Successfully added a new article.")
+    } else {
+      res.send(err)
+    }
+  })
 })
 
 app.listen(3000, function() {
