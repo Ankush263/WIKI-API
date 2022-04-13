@@ -16,7 +16,7 @@ app.get('/', (req, res) => {
   res.send("Hello Ankush")
 })
 
-mongoose.get("mongodb://localhost:27017/wikiDB")
+mongoose.connect("mongodb://localhost:27017/wikiDB")
 
 const articleSchema = {
   title: String,
