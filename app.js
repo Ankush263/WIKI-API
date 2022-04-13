@@ -38,6 +38,8 @@ app.post('/articles', (req, res) => {
     title: req.body.title,
     content: req.body.content
   })
+
+  newArticle.save()
 })
 
 app.listen(3000, function() {
