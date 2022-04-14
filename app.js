@@ -76,7 +76,7 @@ app.route('/articles/:articleTitle')
 })
 
 .put((req, res) => {
-  Article.updateOne(
+  Article.findOneAndUpdate(
     {title: req.params.articleTitle},
     {title: req.body.title, content: req.body.content},
     {overwrite: true},
@@ -85,7 +85,7 @@ app.route('/articles/:articleTitle')
         res.send("successfully updated the code")
       }
       else {
-        res.send(err)
+        res.send("err")
       }
     }
   )
