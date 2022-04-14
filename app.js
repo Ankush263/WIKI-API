@@ -22,6 +22,8 @@ const articleSchema = {
 
 const Article = mongoose.model("Article", articleSchema)
 
+//////////////////////////////////////////////Request Targetting all the Articles//////////////////////////////////////////////
+
 app.route('/articles')
 
 .get((req, res) => {
@@ -57,6 +59,14 @@ app.route('/articles')
       res.send("err")
     }
   })
+})
+
+//////////////////////////////////////////////Request Targetting a specific Article//////////////////////////////////////////////
+
+app.route('/articles/:articleTitle')
+
+.get((req, res) => {
+
 })
 
 app.listen(3000, function() {
