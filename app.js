@@ -85,16 +85,25 @@ app.route('/articles/:articleTitle')
         res.send("successfully updated the code")
       }
       else {
-        res.send("err")
+        res.send(err)
       }
     }
   )
 })
 
 .patch((req, res) => {
-  Article.findByIdAndUpdate({
-    
-  })
+  Article.findByIdAndUpdate(
+    {title: req.params.articleTitle},
+    {$set: req.body},
+    (err) => {
+      if(!err) {
+        res.send("Successfully updated article")
+      }
+      else {
+        res.send(err)
+      }
+    }
+  )
 })
 
 app.listen(3000, function() {
