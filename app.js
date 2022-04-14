@@ -91,6 +91,12 @@ app.route('/articles/:articleTitle')
   )
 })
 
+.patch((req, res) => {
+  Article.findByIdAndUpdate({
+    
+  })
+})
+
 app.listen(3000, function() {
   console.log("Server started on port 3000");
 });
