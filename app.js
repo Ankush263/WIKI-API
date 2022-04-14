@@ -92,7 +92,7 @@ app.route('/articles/:articleTitle')
 })
 
 .patch((req, res) => {
-  Article.findByIdAndUpdate(
+  Article.findOneAndUpdate(
     {title: req.params.articleTitle},
     {$set: req.body},
     (err) => {
